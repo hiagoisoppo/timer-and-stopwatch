@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { darkTheme, lightTheme } from '../styles/themes';
 
 import Navbar from "./Navbar";
@@ -12,7 +12,6 @@ import { GithubIcon, LinkedinIcon } from "../assets/Icons";
 
 function Layout() {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  const navigate = useNavigate();
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
