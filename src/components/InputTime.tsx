@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { StyledInput, NumbersDiv, StyledDots } from "../assets/StyledComponents";
 
 type InputProps = {
