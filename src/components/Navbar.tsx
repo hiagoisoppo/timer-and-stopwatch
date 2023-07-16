@@ -1,20 +1,20 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { TimerIcon, StopWatchIcon } from "../assets/Icons";
+import { StyledNavBar, StyledNavLink } from "../assets/StyledComponents";
+
+
 
 function Navbar() {
-  const StyledNavLink = styled(NavLink)`
-    text-decoration: none;
-  `;
-
   return (
-    <nav>
+    <StyledNavBar>
       <StyledNavLink to="/timer">
+        <TimerIcon />
         Timer
       </StyledNavLink>
       <StyledNavLink to="/stopwatch">
-        Stopwatch
+        <StopWatchIcon />
+        StopWatch
       </StyledNavLink>
-    </nav>
+    </StyledNavBar>
   )
 }
 

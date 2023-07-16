@@ -1,15 +1,12 @@
-import styled from "styled-components"
+import { NotFoundContainer } from "../assets/StyledComponents";
 
 
 function NotFound() {
-  const NotFoundContainer = styled.div`
-  background-color: red;
-  `
 
 
   return (
     <NotFoundContainer>
-      <h1>NotFound</h1>
+      <span>NotFound</span>
     </NotFoundContainer>
   )
 }
