@@ -17,7 +17,7 @@ function Timer() {
       clockInterval = setInterval(()=> {
         if (minutes === 0 && seconds === 0) {
           setIsPaused(true);
-          alert('DANILO CANALHA, SEU TEMPO ACABOU, AGORA VOLTE AOS MALDITOS ESTUDOS!!!!!!!!!!!!!!!');
+          alert('LISTA DE CANALHAS: Danilo, Rodrigo, Leonardo');
         } else if (seconds < 1) {
           setSeconds(59);
           setMinutes((prevMin) => prevMin - 1);
@@ -31,6 +31,20 @@ function Timer() {
   }, [isPaused, seconds]);
   
   const handlePlay = () => {
+    setMinutes((prev) => {
+      if (prev > 59) {
+        return 59;
+      } else {
+        return prev;
+      }
+    })
+    setSeconds((prev) => {
+      if (prev > 59) {
+        return 59;
+      } else {
+        return prev;
+      }
+    })
     setIsPaused(false);
   };
 
@@ -58,7 +72,7 @@ function Timer() {
       <h1>TIMER</h1>
       { isPaused ? (
         <InputTime
-          setIsPaused={setIsPaused}
+          play={handlePlay}
           min={minutes}
           setMin={setMinutes}
           sec={seconds}

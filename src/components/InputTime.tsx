@@ -6,10 +6,10 @@ type InputProps = {
   sec: number;
   setMin: React.Dispatch<React.SetStateAction<number>>;
   setSec: React.Dispatch<React.SetStateAction<number>>;
-  setIsPaused: React.Dispatch<React.SetStateAction<boolean>>;
+  play: () => void;
 };
 
-function InputText({ min, sec, setMin, setSec, setIsPaused }: InputProps) {
+function InputText({ min, sec, setMin, setSec, play }: InputProps) {
   const [editMin, setEditMin] = useState(String(min).padStart(2, '0'));
   const [editSec, setEditSec] = useState(String(sec).padStart(2, '0'));
 
@@ -34,7 +34,7 @@ function InputText({ min, sec, setMin, setSec, setIsPaused }: InputProps) {
         maxLength={2}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleInputs(event)}
         onKeyDownCapture={ (event: React.KeyboardEvent<HTMLInputElement>) => {
-          if (event.keyCode === 13) setIsPaused((prev) => !prev);
+          if (event.keyCode === 13) play();
         }}
       />
       <StyledDots>:</StyledDots>
@@ -45,7 +45,7 @@ function InputText({ min, sec, setMin, setSec, setIsPaused }: InputProps) {
         maxLength={2}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleInputs(event)}
         onKeyDownCapture={ (event: React.KeyboardEvent<HTMLInputElement>) => {
-          if (event.keyCode === 13) setIsPaused((prev) => !prev);
+          if (event.keyCode === 13) play();
         }}
       />
     </NumbersDiv>
