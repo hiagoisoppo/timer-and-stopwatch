@@ -4,11 +4,13 @@ import Numbers from "../components/Numbers";
 import { ButtonBox, ButtonsDiv, NumbersDiv, OutletContainer, StyledDots, PlusBox } from "../assets/StyledComponents";
 import { PlayIcon, PauseIcon, ResetIcon, TimerIcon, PlusIcon } from "../assets/Icons";
 import InputTime from "../components/InputTime";
+import Warning from "../components/Warning";
 
 function Timer() {
   const [isPaused, setIsPaused] = useState(true);
   const [minutes, setMinutes] = useState(10);
   const [seconds, setSeconds] = useState(0);
+  const [isFinish, setIsFinish] = useState(false);
 
   useEffect(()=> {
     let clockInterval = null as any;
@@ -17,7 +19,7 @@ function Timer() {
       clockInterval = setInterval(()=> {
         if (minutes === 0 && seconds === 0) {
           setIsPaused(true);
-          alert('LISTA DE CANALHAS: Danilo, Rodrigo, Leonardo');
+          setIsFinish(true);
         } else if (seconds < 1) {
           setSeconds(59);
           setMinutes((prevMin) => prevMin - 1);
@@ -45,14 +47,17 @@ function Timer() {
         return prev;
       }
     })
+    setIsFinish(false);
     setIsPaused(false);
   };
 
   const handlePause = () => {
+    setIsFinish(false);
     setIsPaused(true);
   };
 
   const handleReset = () => {
+    setIsFinish(false);
     setIsPaused(true);
     setMinutes(10);
     setSeconds(0);
@@ -68,6 +73,7 @@ function Timer() {
 
   return (
     <OutletContainer>
+      {isFinish && <Warning />}
       <TimerIcon />
       <h1>TIMER</h1>
       { isPaused ? (

@@ -254,3 +254,19 @@ export const NotFoundContainer = styled.div`
     -webkit-text-fill-color: transparent;
   }
 `;
+
+export const WarningModal = styled.div`
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+`;
