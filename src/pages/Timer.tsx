@@ -17,7 +17,7 @@ function Timer() {
       clockInterval = setInterval(()=> {
         if (minutes === 0 && seconds === 0) {
           setIsPaused(true);
-          alert('UHUL');
+          alert('DANILO CANALHA, SEU TEMPO ACABOU, AGORA VOLTE AOS MALDITOS ESTUDOS!!!!!!!!!!!!!!!');
         } else if (seconds < 1) {
           setSeconds(59);
           setMinutes((prevMin) => prevMin - 1);
