@@ -16,12 +16,12 @@ function InputText({ min, sec, setMin, setSec, setIsPaused }: InputProps) {
   const handleInputs = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     if (event.target.name === 'min') {
-      setEditMin(event.target.value);
-      setMin(parseInt(event.target.value))
+      parseInt(event.target.value) > 59 ? setEditMin('59') : setEditMin(event.target.value.replace(/[^0-9]/g, '0'));
+      event.target.value === '' ? setMin(0) : setMin(parseInt(event.target.value));
     }
     if (event.target.name === 'sec') {
-      setEditSec(event.target.value);
-      setSec(parseInt(event.target.value))
+      parseInt(event.target.value) > 59 ? setEditSec('59') : setEditSec(event.target.value.replace(/[^0-9]/g, '0'));
+      event.target.value === '' ? setSec(0) : setSec(parseInt(event.target.value))
     }
   }
 

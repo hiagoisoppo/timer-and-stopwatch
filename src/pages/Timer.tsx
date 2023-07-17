@@ -7,7 +7,7 @@ import InputTime from "../components/InputTime";
 
 function Timer() {
   const [isPaused, setIsPaused] = useState(true);
-  const [minutes, setMinutes] = useState(5);
+  const [minutes, setMinutes] = useState(10);
   const [seconds, setSeconds] = useState(0);
 
   useEffect(()=> {
@@ -40,12 +40,15 @@ function Timer() {
 
   const handleReset = () => {
     setIsPaused(true);
-    setMinutes(5);
+    setMinutes(10);
     setSeconds(0);
   };
 
   const handleMoreTime = (time: number) => {
-    setMinutes((prev) => prev + time);
+    setMinutes((prev) => {
+      if (prev + time >= 59) return 59;
+      return prev + time;
+    });
     setIsPaused(false);
   }
 
