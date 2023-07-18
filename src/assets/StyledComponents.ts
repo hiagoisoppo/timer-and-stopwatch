@@ -169,7 +169,7 @@ export const StyledCounter2 = styled.div`
     -webkit-text-fill-color: transparent;
   }
   @media only screen and (max-width: 600px) {
-    width: 200px;
+    width: 100px;
     font-size: 5rem;
   }
 `;
@@ -282,6 +282,11 @@ export const FooterContainer = styled.div`
   }
   @media only screen and (max-width: 600px) {
     font-size: 0.8rem;
+    justify-content: center;
+    gap: 0px;
+    & span {
+      text-align: center;
+    }
   }
 `;
 
