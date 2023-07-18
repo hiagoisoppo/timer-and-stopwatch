@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     background-repeat: no-repeat;
     background-attachment: fixed;
     max-height: 100vh;
+    max-width: 100vw;
     color: ${props => props.theme.colors.font};
     font-family: 'Bebas Neue', sans-serif;
   }

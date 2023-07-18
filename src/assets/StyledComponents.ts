@@ -2,12 +2,11 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const OutletContainer = styled.div`
-  padding: 50px;
   width: 100%;  
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   color: ${props => props.theme.colors.fontColor};
   & h1 {
@@ -17,6 +16,16 @@ export const OutletContainer = styled.div`
     background: -webkit-linear-gradient(${props => props.theme.colors.fontGradient});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  @media only screen and (max-width: 600px) {
+    & h1 {
+      font-size: 3rem;
+      letter-spacing: 0.2rem;
+    }
+    & h2 {
+      font-size: 1.3rem;
+      letter-spacing: 0.1rem;
+    }
   }
 `;
 
@@ -38,7 +47,12 @@ export const ButtonBox = styled.div`
     svg {
       stroke: ${props => props.theme.colors.hover};
     }
-  }   
+  }
+  @media only screen and (max-width: 600px) {
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
 `;
 
 export const ButtonsDiv = styled.div`
@@ -47,6 +61,10 @@ export const ButtonsDiv = styled.div`
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
+  @media only screen and (max-width: 600px) {
+    gap: 0px;
+    margin-bottom: 10px;
+  }
 `;
 
 export const NumbersDiv = styled.div`
@@ -55,6 +73,9 @@ export const NumbersDiv = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    margin: 5px;
+  }
 `;
 
 export const LayoutContainer = styled.div`
@@ -64,6 +85,9 @@ export const LayoutContainer = styled.div`
   height: 100%;
   width: 100%;
   padding: 15px 20px;
+  @media only screen and (max-width: 600px) {
+    padding: 5px 5px;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -72,6 +96,11 @@ export const HeaderContainer = styled.div`
   height: 60px;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 600px) {
+    & svg {
+      width: 30px;
+    }
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -93,6 +122,11 @@ export const StyledNavLink = styled(NavLink)`
       transform: rotate(15deg);
     }
   }
+  @media only screen and (max-width: 600px) {
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
 `;
 
 export const StyledNavBar = styled.nav`
@@ -100,6 +134,10 @@ export const StyledNavBar = styled.nav`
   display: flex;
   gap: 30px;
   justify-content: left;
+  @media only screen and (max-width: 600px) {
+    height: 50px;
+    gap: 0px;
+  }
 `;
 
 export const StyledCounter = styled.div`
@@ -112,6 +150,10 @@ export const StyledCounter = styled.div`
     background: -webkit-linear-gradient(${props => props.theme.colors.fontGradient});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 120px;
+    font-size: 8rem;
   }
 `;
 
@@ -126,6 +168,10 @@ export const StyledCounter2 = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  @media only screen and (max-width: 600px) {
+    width: 200px;
+    font-size: 5rem;
+  }
 `;
 
 export const StyledDots = styled.div`
@@ -137,6 +183,9 @@ export const StyledDots = styled.div`
     background: -webkit-linear-gradient(${props => props.theme.colors.fontGradient});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 4rem;
   }
 `;
 
@@ -153,7 +202,12 @@ export const DarkModeBtn = styled.div`
       stroke: ${props => props.theme.colors.hover};
       transform: rotate(15deg);
     }
-    }   
+    }
+    @media only screen and (max-width: 600px) {
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
   `;
 
   export const StyledInput = styled.input`
@@ -163,7 +217,6 @@ export const DarkModeBtn = styled.div`
     align-items: center;
     text-align: center;
     width: 200px;
-    height: 250px;
     font-size: 15rem;
     font-weight: 500;
     background: -webkit-linear-gradient(${props => props.theme.colors.fontGradient});
@@ -176,6 +229,10 @@ export const DarkModeBtn = styled.div`
       filter: opacity(100%);
       color: white;
     }
+    @media only screen and (max-width: 600px) {
+    font-size: 8rem;
+    width: 120px;
+  }
   `;
 
 export const PlusBox = styled.div`
@@ -199,7 +256,16 @@ export const PlusBox = styled.div`
   }
   & svg {
     width: 30px;
-  }   
+  }
+  @media only screen and (max-width: 600px) {
+    width: 80px;
+    & svg {
+      width: 25px;
+    }
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
 `;
 
 export const FooterContainer = styled.div`
@@ -213,6 +279,9 @@ export const FooterContainer = styled.div`
     border-left: 1px solid white;
     width: 230px;
     text-align: right;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -238,7 +307,12 @@ export const FooterBtnBox = styled.a`
   }
   & svg {
     width: 30px;
-  }   
+  }
+  @media only screen and (max-width: 600px) {
+    &:hover {
+      transform: scale(0.8);
+    }
+  }
 `;
 
 export const NotFoundContainer = styled.div`
@@ -253,6 +327,9 @@ export const NotFoundContainer = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  /* @media only screen and (max-width: 600px) {
+    background-color: blue;
+  } */
 `;
 
 export const WarningModal = styled.div`
@@ -279,6 +356,9 @@ export const WarningModal = styled.div`
   }
   & svg {
     stroke: ${props => props.theme.colors.font};
+  }
+  @media only screen and (max-width: 600px) {
+    text-align: center;
   }
 `;
 
