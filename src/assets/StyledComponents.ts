@@ -259,6 +259,7 @@ export const WarningModal = styled.div`
   position: fixed;
   z-index: 1;
   display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   justify-content: center;
@@ -267,6 +268,40 @@ export const WarningModal = styled.div`
   height: 100%;
   overflow: auto;
   background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.6);
-  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  & div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  & svg {
+    stroke: ${props => props.theme.colors.font};
+  }
+`;
+
+export const WarningPlusBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+  cursor: pointer;
+  height: 60px;
+  width: 80px;
+  border-radius: 15px 2px;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    background-image: ${props => props.theme.colors.hoverBackground};
+    transform: scale(1.2);
+    color: ${props => props.theme.colors.hover};
+    svg {
+      stroke: ${props => props.theme.colors.hover};
+    }
+  }
+  & svg {
+    width: 30px;
+  }   
 `;

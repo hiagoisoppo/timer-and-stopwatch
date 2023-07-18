@@ -5,6 +5,7 @@ import { ButtonBox, ButtonsDiv, NumbersDiv, OutletContainer, StyledDots, PlusBox
 import { PlayIcon, PauseIcon, ResetIcon, TimerIcon, PlusIcon } from "../assets/Icons";
 import InputTime from "../components/InputTime";
 import Warning from "../components/Warning";
+import sound from '../assets/silvio-santos-o-seu-tempo-acabou.mp3';
 
 function Timer() {
   const [isPaused, setIsPaused] = useState(true);
@@ -12,12 +13,15 @@ function Timer() {
   const [seconds, setSeconds] = useState(0);
   const [isFinish, setIsFinish] = useState(false);
 
+  const alarm = new Audio(sound);
+  
   useEffect(()=> {
     let clockInterval = null as any;
 
     if (!isPaused) {
       clockInterval = setInterval(()=> {
         if (minutes === 0 && seconds === 0) {
+          alarm.play();
           setIsPaused(true);
           setIsFinish(true);
         } else if (seconds < 1) {
@@ -64,6 +68,7 @@ function Timer() {
   };
 
   const handleMoreTime = (time: number) => {
+    setIsFinish(false);
     setMinutes((prev) => {
       if (prev + time >= 59) return 59;
       return prev + time;
@@ -73,7 +78,7 @@ function Timer() {
 
   return (
     <OutletContainer>
-      {isFinish && <Warning />}
+      {isFinish && <Warning moreTime={handleMoreTime} setIsFinish={setIsFinish} />}
       <TimerIcon />
       <h1>TIMER</h1>
       { isPaused ? (
