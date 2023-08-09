@@ -1,8 +1,3 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/pages/StopWatch.tsx" },
-    { "src": "/stopwatch", "dest": "/pages/StopWatch.tsx" },
-    { "src": "/timer", "dest": "/pages/Timer.tsx" },
-    { "src": "/*", "dest": "/pages/NotFound.tsx" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
