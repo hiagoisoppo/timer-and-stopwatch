@@ -21,7 +21,7 @@ An application developed for a better organization of time, through the timer an
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## :closed_book: How to access
-  If you prefer to just access the application in operation, just access [this link](https://timer.hiagoisoppo.vercel.app).
+  If you prefer to just access the application in operation, just access the [deploy](https://timer.hiagoisoppo.vercel.app).
   - Open the terminal and clone the repository.
   ```bash
     git clone git@github.com:hiagoisoppo/timer-and-stopwatch.git
