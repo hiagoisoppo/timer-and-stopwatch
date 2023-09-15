@@ -15,6 +15,7 @@ An application developed for a better organization of time, through the timer an
 
 - [REACT](https://react.dev/)
 - [TYPESCRIPT](https://www.typescriptlang.org/)
+- [STYLED-COMPONENTS](https://styled-components.com/)
 - [REACT ROUTER](https://reactrouter.com/en/main)
 - [VITE](https://vitejs.dev/)
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
