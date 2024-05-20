@@ -1,38 +1,36 @@
 <img src="/public/Preview.png" alt="Application Preview" />
 
-# ⏰ [Timer & StopWatch](https://timer.hiagoisoppo.vercel.app)
+# [Timer & StopWatch](https://timer.hiagoisoppo.vercel.app)
 
-An application developed for a better organization of time, through the timer and stopwatch.
+![Static Badge](https://img.shields.io/badge/ReactJs-18.2.0-blue)
+![Static Badge](https://img.shields.io/badge/ViteJs-4.3.9-yellow)
+![Static Badge](https://img.shields.io/badge/TypeScript-5.0.2-blue)
+![Static Badge](https://img.shields.io/badge/StyledComponents-6.0.2-pink)
+![Static Badge](https://img.shields.io/badge/ReactRouter-6.14.1-red)
 
-## :bomb: Features
+## Descrição
+Uma aplicação desenvolvida para uma melhor organização do tempo, através do cronómetro e cronómetro.
 
-- A timer with precise time input, and alarm sounds.
-- A stopwatch function.
-- This project has darkmode.
-- This project is responsive.
+## Funcionalidades
 
-## :file_folder: Technologies
+- Um temporizador com entrada precisa de tempo e sons de alarme.
+- Uma função de cronômetro.
+- Este projeto possui modo escuro.
+- Este projeto é responsivo.
 
-- [REACT](https://react.dev/)
-- [TYPESCRIPT](https://www.typescriptlang.org/)
-- [STYLED-COMPONENTS](https://styled-components.com/)
-- [REACT ROUTER](https://reactrouter.com/en/main)
-- [VITE](https://vitejs.dev/)
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-
-## :closed_book: How to access
-  If you prefer to just access the application in operation, just access the [deploy](https://timer.hiagoisoppo.vercel.app).
-  - Open the terminal and clone the repository.
+## Como acessar a aplicação
+  Se for de sua preferência visualizar a aplicação em operação, basta acessar o [deploy](https://timer.hiagoisoppo.vercel.app), caso deseje instalar localmente prossiga com o passo a passo:
+  - Abra o terminal e faça um clone do repositório.
   ```bash
     git clone git@github.com:hiagoisoppo/timer-and-stopwatch.git
   ```
-  - Install the dependencies.
+  - Acesse a pasta clonada do repositório, e instale as dependências.
   ```bash
+    cd timer-and-stopwatch
     npm install
   ```
-  - Start the development server.
+  - Inicie o servidor de desenvolvimento.
   ```bash
     npm run dev
   ```
-  - Open browser at [http://localhost:3000](http://localhost:3000).
+  - Abra o navegador no endereço [http://localhost:5173](http://localhost:5173).
