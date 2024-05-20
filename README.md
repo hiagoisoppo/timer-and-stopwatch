@@ -9,7 +9,7 @@
 ![Static Badge](https://img.shields.io/badge/ReactRouter-6.14.1-red)
 
 ## Descrição
-Uma aplicação desenvolvida para uma melhor organização do tempo, através do cronómetro e cronómetro.
+Aplicação Web, desenvolvida para uma melhor organização do tempo, através do temporizador e cronômetro.
 
 ## Funcionalidades
 
